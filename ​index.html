@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#101827">
+<title>TOÁN 11 • ÔN GIỮA HỌC KỲ I • 2K10</title>
+<style>
+:root{--bg:#0b1220;--panel:#121d30;--panel2:#18263d;--text:#eef4ff;--muted:#a9b8cf;--line:#2b3c58;--a:#64d7c5;--b:#8bb8ff;--gold:#ffd27a;--pink:#ff9fb5;--good:#8ee0a1}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 15% 0%,#1b3151 0,transparent 35%),var(--bg);color:var(--text);font:16px/1.65 system-ui,-apple-system,"Segoe UI",sans-serif}
+button{font:inherit;cursor:pointer}.top{position:sticky;top:0;z-index:10;background:#0b1220eF;border-bottom:1px solid var(--line);backdrop-filter:blur(12px);padding:10px 16px;display:flex;gap:12px;align-items:center;justify-content:space-between}.brand{font-weight:900;letter-spacing:.5px;color:var(--a)}.top small{color:var(--muted)}.controls{display:flex;gap:7px;flex-wrap:wrap}.btn{border:1px solid var(--line);background:var(--panel2);color:var(--text);padding:8px 13px;border-radius:11px}.btn.primary{background:var(--a);color:#06201e;border-color:var(--a);font-weight:800}.btn:hover{filter:brightness(1.12)}.progress{height:4px;background:#24334a}.progress span{display:block;height:100%;background:linear-gradient(90deg,var(--a),var(--b));width:0;transition:.2s}
+.wrap{max-width:1050px;margin:auto;padding:26px 18px 90px}.slide{display:none;min-height:72vh;animation:in .25s ease}.slide.active{display:block}@keyframes in{from{opacity:.3;transform:translateY(8px)}to{opacity:1;transform:none}}
+.kicker{color:var(--a);font-size:.82rem;font-weight:800;letter-spacing:1.5px;text-transform:uppercase}h1{font-size:clamp(2rem,6vw,4rem);line-height:1.12;margin:.3em 0}h2{font-size:clamp(1.6rem,4vw,2.4rem);line-height:1.2;margin:.2em 0 .7em}h3{color:var(--b);margin:1.1em 0 .35em}p{margin:.5em 0}.lead{font-size:1.12rem;color:#d3e0f4;max-width:800px}.muted{color:var(--muted)}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:13px;margin:18px 0}.card{background:linear-gradient(145deg,var(--panel),#101a2b);border:1px solid var(--line);border-radius:17px;padding:17px;box-shadow:0 10px 30px #0002}.card h3{margin-top:0}.tag{display:inline-block;border:1px solid #36506f;border-radius:99px;padding:2px 9px;color:var(--a);font-size:.8rem;margin:2px}.call{border-left:4px solid var(--a);background:#16313a80;padding:12px 15px;border-radius:0 12px 12px 0;margin:14px 0}.warn{border-left-color:var(--gold);background:#3b302080}.formula{font-family:Cambria,Georgia,serif;font-size:1.12rem;background:#080f1b;border:1px solid var(--line);padding:12px 15px;border-radius:12px;margin:9px 0;overflow-wrap:anywhere}.math{font-family:Cambria,Georgia,serif;font-size:1.08em;color:#fff}.pill{color:#061d1b;background:var(--a);border-radius:7px;padding:1px 7px;font-weight:800}.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:13px}.step{padding:10px 12px;margin:8px 0;border:1px dashed #49617f;border-radius:11px}.step b{color:var(--gold)}table{border-collapse:collapse;width:100%;margin:12px 0;font-size:.95rem}th,td{border:1px solid var(--line);padding:9px;text-align:center}th{background:#1b2b43;color:var(--a)}td:first-child{text-align:left}.answer{display:none;background:#0a1724;border:1px solid #31536a;padding:12px;border-radius:10px;margin-top:8px}.answer.show{display:block}.reveal{margin-top:8px}.q{border:1px solid var(--line);border-radius:14px;padding:14px;margin:12px 0;background:#111d2e}.q strong{color:var(--gold)}.small{font-size:.9rem}.navbottom{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:25px;border-top:1px solid var(--line);padding-top:16px}.counter{color:var(--muted);font-variant-numeric:tabular-nums}.toc button{display:block;width:100%;text-align:left;margin:6px 0}.check{color:var(--good)}.hero{padding:28px 0 12px}.big{font-size:clamp(3rem,12vw,7rem);font-weight:950;line-height:1;color:transparent;background:linear-gradient(100deg,var(--a),var(--b),var(--gold));background-clip:text}.footer{color:var(--muted);font-size:.85rem;margin-top:30px}
+@media(max-width:600px){.top{align-items:flex-start;flex-direction:column}.controls{width:100%}.controls .btn{flex:1}.wrap{padding:18px 13px 70px}.slide{min-height:75vh}table{font-size:.82rem}th,td{padding:6px}}
+@media print{body{background:white;color:#111}.top,.progress,.navbottom,.controls{display:none!important}.wrap{max-width:none;padding:0}.slide{display:block!important;min-height:0;page-break-after:always}.card,.formula,.q{background:white;color:#111;border-color:#aaa;box-shadow:none}.muted,.lead{color:#333}h3{color:#174b80}.answer{display:block;background:white;color:#111}}
+</style>
+</head>
+<body>
+<header class="top">
+ <div><div class="brand">NVTHUAN • TOÁN 11</div><small>Ôn giữa học kỳ I · 2K10 · 90 phút</small></div>
+ <div class="controls">
+  <button class="btn" onclick="toggleToc()">☰ Mục lục</button>
+  <button class="btn" onclick="window.print()">⎙ In / PDF</button>
+  <button class="btn" onclick="fontSize(-1)">A−</button><button class="btn" onclick="fontSize(1)">A+</button>
+ </div>
+</header><div class="progress"><span id="bar"></span></div>
+<main class="wrap">
+<section class="slide active">
+ <div class="hero"><div class="kicker">Bộ ôn tập cấp tốc · bám sát ma trận bạn gửi</div><div class="big">10+?</div>
+ <h1>CHINH PHỤC TOÁN 11</h1><p class="lead">Tổng hợp từ nền tảng đến vận dụng cho toàn bộ 9 bài trong ma trận: lượng giác, dãy số – cấp số, và thống kê mẫu số liệu ghép nhóm.</p></div>
+ <div class="grid">
+  <div class="card"><span class="tag">Chương I</span><h3>Hàm số & phương trình lượng giác</h3><b>10 tiết · 4 bài</b><p class="muted">Giá trị góc, công thức, đồ thị, phương trình cơ bản.</p></div>
+  <div class="card"><span class="tag">Chương II</span><h3>Dãy số – cấp số</h3><b>7 tiết · 3 bài</b><p class="muted">Dãy số, cấp số cộng, cấp số nhân.</p></div>
+  <div class="card"><span class="tag">Chương III</span><h3>Thống kê ghép nhóm</h3><b>4 tiết · 2 bài</b><p class="muted">Bảng tần số và các số đo xu thế trung tâm.</p></div>
+ </div>
+ <div class="call warn"><b>Điều cần nói rõ:</b> không tài liệu nào có thể bảo đảm chắc chắn điểm 10+. Nhưng nếu học hết phần cốt lõi, tự làm bài mẫu không nhìn lời giải và sửa được lỗi, bạn sẽ có nền tảng tốt để hướng tới điểm cao.</div>
+ <p class="muted">Cách dùng: học lần lượt bằng nút Tiếp → tự giải câu hỏi → bấm “Xem lời giải”. Có thể mở trực tiếp file này trên điện thoại, không cần mạng.</p>
+</section>
+
+<section class="slide">
+ <div class="kicker">00 · Bản đồ đề thi</div><h2>Đọc ma trận để học đúng trọng tâm</h2>
+ <table><tr><th>Chủ đề</th><th>Điểm</th><th>Phần kiến thức</th></tr>
+ <tr><td>Chương I · Lượng giác</td><td>4,5</td><td>Giá trị & công thức; hàm số & phương trình</td></tr>
+ <tr><td>Chương II · Dãy số</td><td>3,5</td><td>Dãy số; cấp số cộng; cấp số nhân</td></tr>
+ <tr><td>Chương III · Thống kê</td><td>2,0</td><td>Mẫu số liệu ghép nhóm; số đo trung tâm</td></tr>
+ <tr><td><b>Tổng</b></td><td><b>10,0</b></td><td>12 câu trắc nghiệm + 4 câu đúng/sai (16 ý) + 6 câu trả lời ngắn</td></tr></table>
+ <div class="grid"><div class="card"><h3>Ưu tiên 1</h3><p>Lượng giác chiếm phần lớn điểm. Phải thuộc vòng tròn lượng giác, dấu các hàm, công thức và dạng phương trình.</p></div><div class="card"><h3>Ưu tiên 2</h3><p>Cấp số cộng/nhân thường có công thức rõ ràng, luyện đúng quy trình sẽ lấy điểm chắc.</p></div><div class="card"><h3>Ưu tiên 3</h3><p>Thống kê: hiểu trung điểm lớp, tần số, tần số tích lũy và công thức trung bình/trung vị/mốt.</p></div></div>
+ <div class="call"><b>Chiến thuật 90 phút:</b> làm câu nhận biết trước; đánh dấu câu tính dài; kiểm tra dấu, đơn vị, điều kiện và số nghiệm ở cuối.</div>
+</section>
+
+<section class="slide">
+ <div class="kicker">01 · Nền tảng lượng giác</div><h2>Góc lượng giác và đơn vị đo</h2>
+ <h3>1. Độ và radian</h3><div class="formula">180° = π rad; &nbsp; 1° = π/180 rad; &nbsp; 1 rad = 180°/π</div>
+ <p>Đổi độ sang radian: nhân π/180. Đổi radian sang độ: nhân 180/π.</p>
+ <div class="two"><div class="card"><h3>Ví dụ 1 · dễ</h3><p>Đổi 150° sang radian.</p><div class="answer show">150° × π/180° = <b>5π/6 rad</b>.</div></div><div class="card"><h3>Ví dụ 2 · dễ</h3><p>Đổi 7π/4 rad sang độ.</p><div class="answer show">7π/4 × 180°/π = <b>315°</b>.</div></div></div>
+ <h3>2. Góc cùng tia cuối</h3><div class="formula">α + k·2π (rad), hoặc α + k·360°; k ∈ ℤ</div>
+ <p>Góc âm quay theo chiều kim đồng hồ; góc dương quay ngược chiều kim đồng hồ. Khi rút gọn, cộng/trừ bội của 2π hoặc 360°.</p>
+ <div class="q"><strong>Tự luyện:</strong> Viết góc cùng tia cuối với 5π/3 trong khoảng [0;2π), và đổi −225° sang góc dương nhỏ hơn 360°.<button class="btn reveal" onclick="reveal(this)">Xem lời giải</button><div class="answer">5π/3 đã nằm trong [0;2π). Với −225°: −225° + 360° = <b>135°</b>.</div></div>
+</section>
+
+<section class="slide">
+ <div class="kicker">02 · Giá trị lượng giác</div><h2>Đường tròn lượng giác & dấu các hàm</h2>
+ <p>Trên đường tròn đơn vị, điểm cuối của góc α có tọa độ <span class="math">(cos α; sin α)</span>. Vì vậy cos là hoành độ, sin là tung độ.</p>
+ <div class="card"><h3>Bảng góc đặc biệt phải thuộc</h3>
+ <table><tr><th>α</th><th>0</th><th>π/6</th><th>π/4</th><th>π/3</th><th>π/2</th></tr>
+ <tr><td>sin α</td><td>0</td><td>1/2</td><td>√2/2</td><td>√3/2</td><td>1</td></tr>
+ <tr><td>cos α</td><td>1</td><td>√3/2</td><td>√2/2</td><td>1/2</td><td>0</td></tr>
+ <tr><td>tan α</td><td>0</td><td>√3/3</td><td>1</td><td>√3</td><td>Không xác định</td></tr>
+ <tr><td>cot α</td><td>Không xác định</td><td>√3</td><td>1</td><td>√3/3</td><td>0</td></tr></table></div>
+ <h3>Dấu theo góc phần tư</h3><table><tr><th>Góc phần tư</th><th>sin</th><th>cos</th><th>tan, cot</th></tr><tr><td>I (0;π/2)</td><td>+</td><td>+</td><td>+</td></tr><tr><td>II (π/2;π)</td><td>+</td><td>−</td><td>−</td></tr><tr><td>III (π;3π/2)</td><td>−</td><td>−</td><td>+</td></tr><tr><td>IV (3π/2;2π)</td><td>−</td><td>+</td><td>−</td></tr></table>
+ <div class="call">Mẹo nhớ: sin dương ở nửa trên; cos dương ở nửa phải; tan dương ở góc phần tư I và III.</div>
+</section>
+
+<section class="slide">
+ <div class="kicker">02 · Công thức</div><h2>Hệ thức và công thức lượng giác</h2>
+ <div class="formula">sin²x + cos²x = 1</div><div class="formula">tan x = sin x / cos x (cos x ≠ 0); &nbsp; cot x = cos x / sin x (sin x ≠ 0)</div>
+ <div class="formula">1 + tan²x = 1/cos²x; &nbsp; 1 + cot²x = 1/sin²x</div>
+ <h3>Cung liên kết</h3><table><tr><th>Công thức</th><th>Kết quả</th></tr><tr><td>sin(−x), cos(−x)</td><td>−sin x ; cos x</td></tr><tr><td>sin(π−x), cos(π−x)</td><td>sin x ; −cos x</td></tr><tr><td>sin(π+x), cos(π+x)</td><td>−sin x ; −cos x</td></tr><tr><td>sin(π/2−x), cos(π/2−x)</td><td>cos x ; sin x</td></tr><tr><td>sin(2π+x), cos(2π+x)</td><td>sin x ; cos x</td></tr></table>
+ <h3>Công thức cộng</h3><div class="formula">sin(a ± b) = sin a cos b ± cos a sin b</div><div class="formula">cos(a ± b) = cos a cos b ∓ sin a sin b</div><div class="formula">tan(a ± b) = (tan a ± tan b)/(1 ∓ tan a tan b)</div>
+ <h3>Công thức nhân đôi</h3><div class="formula">sin 2a = 2sin a cos a</div><div class="formula">cos 2a = cos²a − sin²a = 2cos²a − 1 = 1 − 2sin²a</div><div class="formula">tan 2a = 2tan a/(1 − tan²a)</div>
+ <div class="call warn">Lỗi hay gặp: dấu ∓ trong công thức cos(a ± b) ngược dấu với dấu ở trong ngoặc; luôn viết công thức trước khi thay số.</div>
+</section>
+
+<section class="slide">
+ <div class="kicker">02 · Công thức nâng cao</div><h2>Biến đổi tổng – tích, tích – tổng</h2>
+ <div class="formula">sin a + sin b = 2sin((a+b)/2)cos((a−b)/2)</div>
+ <div class="formula">sin a − sin b = 2cos((a+b)/2)sin((a−b)/2)</div>
+ <div class="formula">cos a + cos b = 2cos((a+b)/2)cos((a−b)/2)</div>
+ <div class="formula">cos a − cos b = −2sin((a+b)/2)sin((a−b)/2)</div>
+ <h3>Tích thành tổng</h3>
+ <div class="formula">sin a sin b = [cos(a−b) − cos(a+b)]/2</div><div class="formula">cos a cos b = [cos(a−b) + cos(a+b)]/2</div><div class="formula">sin a cos b = [sin(a+b) + sin(a−b)]/2</div>
+ <div class="q"><strong>Ví dụ · trung bình:</strong> Tính sin 75° + sin 15°.<div class="step">Dùng tổng thành tích: = 2sin 45° cos 30°.</div><div class="step">= 2·(√2/2)·(√3/2) = <b>√6/2</b>.</div></div>
+ <div class="q"><strong>Tự luyện:</strong> Tính cos 75° + cos 15°.<button class="btn reveal" onclick="reveal(this)">Xem lời giải</button><div class="answer">= 2cos45°cos30° = <b>√6/2</b>.</div></div>
+</section>
+
+<section class="slide">
+ <div class="kicker">03 · Hàm số lượng giác</div><h2>Sin, cos, tan, cot: tập xác định – chu kỳ – đồ thị</h2>
+ <table><tr><th>Hàm</th><th>Tập xác định</th><th>Tập giá trị</th><th>Chu kỳ</th></tr>
+ <tr><td>y = sin x</td><td>ℝ</td><td>[−1;1]</td><td>2π</td></tr><tr><td>y = cos x</td><td>ℝ</td><td>[−1;1]</td><td>2π</td></tr><tr><td>y = tan x</td><td>x ≠ π/2 + kπ</td><td>ℝ</td><td>π</td></tr><tr><td>y = cot x</td><td>x ≠ kπ</td><td>ℝ</td><td>π</td></tr></table>
+ <div class="two"><div class="card"><h3>y = sin x</h3><p>Lẻ; đồng biến trên [−π/2 + 2kπ; π/2 + 2kπ], nghịch biến trên [π/2 + 2kπ; 3π/2 + 2kπ].</p><p>Cực đại 1 tại π/2 + 2kπ; cực tiểu −1 tại −π/2 + 2kπ.</p></div><div class="card"><h3>y = cos x</h3><p>Chẵn; đồng biến trên [−π + 2kπ; 2kπ], nghịch biến trên [2kπ; π + 2kπ].</p><p>Cực đại 1 tại 2kπ; cực tiểu −1 tại π + 2kπ.</p></div><div class="card"><h3>y = tan x</h3><p>Lẻ; đồng biến trên từng khoảng (−π/2 + kπ; π/2 + kπ); có tiệm cận đứng x = π/2 + kπ.</p></div><div class="card"><h3>y = cot x</h3><p>Lẻ; nghịch biến trên từng khoảng (kπ;(k+1)π); có tiệm cận đứng x = kπ.</p></div></div>
+ <p class="muted">k ∈ ℤ. Đồ thị sin/cos nằm trong dải −1 đến 1; tan/cot có các nhánh lặp lại theo chu kỳ.</p>
+</section>
+
+<section class="slide">
+ <div class="kicker">03 · Biến đổi đồ thị</div><h2>Hàm số dạng y = A sin(Bx + C) + D</h2>
+ <div class="formula">Biên độ = |A|; chu kỳ T = 2π/|B| (B ≠ 0); tịnh tiến đứng D; pha C.</div>
+ <p>Với cos cũng tương tự. Nếu B âm, chu kỳ vẫn lấy trị tuyệt đối. Với tan/cot, chu kỳ là π/|B|.</p>
+ <div class="q"><strong>Ví dụ:</strong> y = 2sin(3x − π/2) + 1. Xác định biên độ, chu kỳ, giá trị lớn nhất/nhỏ nhất.<div class="step">A=2 ⇒ biên độ 2. B=3 ⇒ T=2π/3.</div><div class="step">sin nằm trong [−1;1] ⇒ 2sin nằm trong [−2;2]. Cộng 1 ⇒ y ∈ [−1;3].</div><div class="step">Kết luận: max = <b>3</b>, min = <b>−1</b>.</div></div>
+ <div class="q"><strong>Tự luyện:</strong> y = −3cos(2x)+4 có biên độ, chu kỳ, GTLN, GTNN là gì?<button class="btn reveal" onclick="reveal(this)">Xem lời giải</button><div class="answer">Biên độ 3; T=π; vì cos∈[−1;1] nên −3cos∈[−3;3], cộng 4 được [1;7]. GTLN 7, GTNN 1.</div></div>
+</section>
+
+<section class="slide">
+ <div class="kicker">04 · Phương trình lượng giác</div><h2>Bốn phương trình cơ bản</h2>
+ <div class="formula">sin x = sin α ⇔ x = α + 2kπ hoặc x = π − α + 2kπ</div>
+ <div class="formula">cos x = cos α ⇔ x = ±α + 2kπ</div>
+ <div class="formula">tan x = tan α ⇔ x = α + kπ</div>
+ <div class="formula">cot x = cot α ⇔ x = α + kπ</div>
+ <p>Trong các công thức trên, k ∈ ℤ. Nhớ kiểm tra điều kiện xác định của biểu thức ban đầu.</p>
+ <div class="two"><div class="card"><h3>Ví dụ 1</h3><p>sin x = 1/2.</p><p>Ta có α=π/6.</p><div class="answer show">x=π/6+2kπ hoặc x=5π/6+2kπ.</div></div><div class="card"><h3>Ví dụ 2</h3><p>cos x = −√2/2.</p><p>Góc chuẩn có cos âm: 3π/4.</p><div class="answer show">x=±3π/4+2kπ.</div></div></div>
+ <div class="q"><strong>Tự luyện:</strong> Giải tan x = −√3 và cot x = 1.<button class="btn reveal" onclick="reveal(this)">Xem lời giải</button><div class="answer">tan x=−√3 ⇒ x=−π/3+kπ. cot x=1 ⇒ tan x=1 ⇒ x=π/4+kπ.</div></div>
+</section>
+
+<section class="slide">
+ <div class="kicker">04 · Phương trình cơ bản</div><h2>Tìm nghiệm trong một khoảng, đoạn</h2>
+ <p>Quy trình: (1) giải phương trình tổng quát; (2) thay k nguyên để nghiệm nằm trong khoảng; (3) liệt kê, không bỏ sót đầu mút.</p>
+ <div class="q"><strong>Ví dụ mẫu:</strong> Tìm nghiệm của sin x = 1/2 trên [0;2π].<div class="step">Nghiệm tổng quát: x=π/6+2kπ hoặc x=5π/6+2kπ.</div><div class="step">Trong [0;2π], chỉ có k=0.</div><div class="step">Vậy x ∈ <b>{π/6; 5π/6}</b>.</div></div>
+ <div class="q"><strong>Khá:</strong> Tìm nghiệm cos x = 0 trên [−π;2π].<button class="btn reveal" onclick="reveal(this)">Xem lời giải</button><div class="answer">cos x=0 ⇒ x=π/2+kπ. Thử k=−1,0,1: x=−π/2, π/2, 3π/2. Vậy có 3 nghiệm.</div></div>
+ <div class="q"><strong>Khó hơn:</strong> Giải 2sin²x−3sin x+1=0 trên ℝ.<button class="btn reveal" onclick="reveal(this)">Xem lời giải</button><div class="answer">Đặt t=sin x, t∈[−1;1]. Ta có 2t²−3t+1=0 ⇔ t=1 hoặc t=1/2. Vậy x=π/2+2kπ hoặc x=π/6+2kπ hoặc x=5π/6+2kπ.</div></div>
+</section>
+
+<section class="slide">
+ <div class="kicker">04 · Dạng biến đổi</div><h2>Phương trình đưa về cơ bản</h2>
+ <h3>Dạng 1: Đặt nhân tử chung</h3><div class="formula">sin x(2cos x − 1)=0 ⇔ sin x=0 hoặc cos x=1/2</div>
+ <h3>Dạng 2: Đổi về một hàm</h3><p>Dùng sin²x+cos²x=1 để chỉ còn sin x hoặc cos x.</p>
+ <h3>Dạng 3: Phương trình bậc hai theo sin/cos</h3><p>Đặt t=sin x hoặc t=cos x, nhớ điều kiện −1≤t≤1.</p>
+ <h3>Dạng 4: Dùng công thức</h3><p>Gặp sin2x, cos2x, sin(a±b), hãy biến đổi để đưa về phương trình cơ bản.</p>
+ <div class="q"><strong>Ví dụ vận dụng:</strong> Giải 2cos²x−1=0.<div class="step">cos²x=1/2 ⇒ cos x=±√2/2.</div><div class="step">Gộp nghiệm: <b>x=π/4+kπ/2</b>, k∈ℤ.</div></div>
+ <div class="call warn">Không được chia hai vế cho sin x hoặc cos x nếu chưa xét trường hợp hàm đó bằng 0; có thể làm mất nghiệm.</div>
+</section>
+
+<section class="slide">
+ <div class="kicker">05 · Dãy số</div><h2>Khái niệm, cách cho dãy số và số hạng tổng quát</h2>
+ <p>Dãy số là một hàm số xác định trên tập số nguyên dương (thường là ℕ*), mỗi n ứng với một số uₙ.</p>
+ <div class="grid"><div class="card"><h3>Liệt kê</h3><p>Ví dụ: 2; 4; 6; 8; …</p></div><div class="card"><h3>Công thức tổng quát</h3><p>uₙ=2n, n≥1.</p></div><div class="card"><h3>Truy hồi</h3><p>u₁=2; uₙ₊₁=uₙ+2.</p></div></div>
+ <h3>Tăng, giảm, bị chặn</h3><p>So sánh uₙ₊₁ với uₙ: nếu uₙ₊₁&gt;uₙ thì tăng; nếu nhỏ hơn thì giảm. Dãy bị chặn nếu tồn tại m,M sao cho m≤uₙ≤M với mọi n.</p>
+ <div class="q"><strong>Ví dụ:</strong> Cho uₙ=3n−2. Tính u₁,u₄ và xét tính tăng.<div class="answer show">u₁=1; u₄=10. uₙ₊₁−uₙ=[3(n+1)−2]−(3n−2)=3&gt;0 nên dãy tăng.</div></div>
+ <div class="q"><strong>Tự luyện:</strong> uₙ=1/n. Dãy tăng hay giảm? Có bị chặn không?<button class="btn reveal" onclick="reveal(this)">Xem lời giải</button><div class="answer">uₙ₊₁=1/(n+1)&lt;1/n=uₙ nên giảm. 0&lt;uₙ≤1 nên bị chặn dưới bởi 0 và trên bởi 1.</div></div>
+</section>
+
+<section class="slide">
+ <div class="kicker">06 · Cấp số cộng</div><h2>Định nghĩa và công thức CSC</h2>
+ <p>Cấp số cộng (CSC) là dãy có hiệu giữa hai số hạng liên tiếp không đổi:</p>
+ <div class="formula">uₙ₊₁ − uₙ = d (hằng số d, gọi là công sai)</div>
+ <div class="formula">uₙ = u₁ + (n−1)d</div>
+ <div class="formula">Sₙ = u₁+…+uₙ = n(u₁+uₙ)/2 = n[2u₁+(n−1)d]/2</div>
+ <p>Ba số a,b,c theo thứ tự lập CSC khi <b>2b=a+c</b>.</p>
+ <h3>Nhận biết</h3><p>d&gt;0: tăng; d&lt;0: giảm; d=0: không đổi.</p>
+ <div class="q"><strong>Ví dụ mẫu:</strong> CSC có u₁=3, d=2. Tính u₁₀ và S₁₀.<div class="step">u₁₀=3+9·2=<b>21</b>.</div><div class="step">S₁₀=10(3+21)/2=<b>120</b>.</div></div>
+ <div class="q"><strong>Trung bình:</strong> CSC có u₃=8, u₇=20. Tìm d và u₁.<button class="btn reveal" onclick="reveal(this)">Xem lời giải</button><div class="answer">u₇−u₃=4d=12 ⇒ d=3. u₃=u₁+2d ⇒ 8=u₁+6 ⇒ u₁=2.</div></div>
+</section>
+
+<section class="slide">
+ <div class="kicker">06 · Cấp số cộng</div><h2>Bài toán CSC từ dễ đến vận dụng</h2>
+ <div class="q"><strong>Dễ:</strong> CSC 5; 8; 11; … Tìm d và u₁₂.<button class="btn reveal" onclick="reveal(this)">Xem lời giải</button><div class="answer">d=8−5=3. u₁₂=5+11·3=<b>38</b>.</div></div>
+ <div class="q"><strong>Trung bình:</strong> CSC có u₂=7, u₅=16. Tìm u₁ và S₁₀.<button class="btn reveal" onclick="reveal(this)">Xem lời giải</button><div class="answer">u₅−u₂=3d=9 ⇒ d=3. u₁=u₂−d=4. u₁₀=4+9·3=31. S₁₀=10(4+31)/2=<b>175</b>.</div></div>
+ <div class="q"><strong>Vận dụng:</strong> Một rạp có hàng đầu 18 ghế, mỗi hàng sau nhiều hơn hàng trước 2 ghế. Có 15 hàng. Hỏi hàng cuối và tổng số ghế?<button class="btn reveal" onclick="reveal(this)">Xem lời giải</button><div class="answer">u₁=18,d=2,n=15. u₁₅=18+14·2=46 ghế. S₁₅=15(18+46)/2=<b>480 ghế</b>.</div></div>
+ <div class="call">Bài toán thực tế: xác định rõ u₁ (giá trị đầu), d (mức tăng/giảm mỗi bước), n (số bước), rồi mới thay công thức.</div>
+</section>
+
+<section class="slide">
+ <div class="kicker">07 · Cấp số nhân</div><h2>Định nghĩa và công thức CSN</h2>
+ <p>Cấp số nhân (CSN) là dãy có tỉ số giữa hai số hạng liên tiếp không đổi (khi mẫu khác 0):</p>
+ <div class="formula">uₙ₊₁/uₙ = q ⇔ uₙ₊₁ = q·uₙ</div>
+ <div class="formula">uₙ = u₁·qⁿ⁻¹</div>
+ <div class="formula">Sₙ = u₁(1−qⁿ)/(1−q), q ≠ 1</div>
+ <p>Nếu q=1 thì Sₙ=nu₁. Ba số a,b,c theo thứ tự lập CSN khi b²=ac (điều kiện dấu cần xét khi tìm số thực).</p>
+ <div class="q"><strong>Ví dụ:</strong> CSN có u₁=2, q=3. Tìm u₅ và S₅.<div class="step">u₅=2·3⁴=<b>162</b>.</div><div class="step">S₅=2(1−3⁵)/(1−3)=<b>242</b>.</div></div>
+ <div class="q"><strong>Tự luyện:</strong> CSN 81; 27; 9; … Tìm q và u₆.<button class="btn reveal" onclick="reveal(this)">Xem lời giải</button><div class="answer">q=27/81=1/3. u₆=81·(1/3)⁵=<b>1/3</b>.</div></div>
+</section>
+
+<section class="slide">
+ <div class="kicker">07 · Cấp số nhân</div><h2>Bài toán CSN từ dễ đến khó</h2>
+ <div class="q"><strong>Dễ:</strong> CSN có u₁=5,q=2. Tính u₆.<button class="btn reveal" onclick="reveal(this)">Xem lời giải</button><div class="answer">u₆=5·2⁵=<b>160</b>.</div></div>
+ <div class="q"><strong>Trung bình:</strong> CSN có u₂=6,u₅=162, q&gt;0. Tìm q,u₁.<button class="btn reveal" onclick="reveal(this)">Xem lời giải</button><div class="answer">u₅/u₂=q³=162/6=27 ⇒ q=3. u₁=u₂/q=2.</div></div>
+ <div class="q"><strong>Vận dụng:</strong> Một khoản tiền ban đầu 1 triệu đồng tăng 10% sau mỗi kỳ. Sau 4 kỳ có bao nhiêu tiền (không tính khoản phát sinh khác)?<button class="btn reveal" onclick="reveal(this)">Xem lời giải</button><div class="answer">Mỗi kỳ nhân 1,1. Sau 4 kỳ: 1·1,1⁴ = 1,4641 triệu đồng (xấp xỉ 1.464.100 đồng).</div></div>
+ <div class="call warn">Phân biệt: CSC cộng cùng một số d; CSN nhân cùng một số q. Đừng nhầm công thức uₙ = u₁+(n−1)d với uₙ=u₁qⁿ⁻¹.</div>
+</section>
+
+<section class="slide">
+ <div class="kicker">08 · Thống kê</div><h2>Mẫu số liệu ghép nhóm là gì?</h2>
+ <p>Khi dữ liệu nhiều, ta gom các giá trị vào các khoảng (nhóm). Mỗi khoảng có tần số là số quan sát rơi vào khoảng đó.</p>
+ <table><tr><th>Nhóm điểm</th><th>[0;2)</th><th>[2;4)</th><th>[4;6)</th><th>[6;8)</th><th>[8;10]</th></tr>
+ <tr><td>Tần số nᵢ</td><td>2</td><td>5</td><td>8</td><td>4</td><td>1</td></tr></table>
+ <h3>Thuật ngữ cần nhớ</h3><ul><li><b>Đầu mút trái/phải:</b> aᵢ,bᵢ của nhóm [aᵢ;bᵢ).</li><li><b>Độ dài nhóm:</b> h=bᵢ−aᵢ.</li><li><b>Giá trị đại diện (trung điểm):</b> xᵢ=(aᵢ+bᵢ)/2.</li><li><b>Tần số:</b> nᵢ; tổng số quan sát N=Σnᵢ.</li><li><b>Tần số tích lũy:</b> cộng dồn các tần số đến nhóm đang xét.</li></ul>
+ <div class="call">Với bảng ví dụ: N=2+5+8+4+1=20; trung điểm các nhóm lần lượt 1,3,5,7,9; tần số tích lũy 2,7,15,19,20.</div>
+</section>
+
+<section class="slide">
+ <div class="kicker">09 · Số đo xu thế trung tâm</div><h2>Số trung bình của mẫu ghép nhóm</h2>
+ <div class="formula">x̄ ≈ (n₁x₁+n₂x₂+…+nₖxₖ)/N = Σ(nᵢxᵢ)/N</div>
+ <p>xᵢ là trung điểm nhóm; nᵢ là tần số; N là tổng tần số. Đây là giá trị gần đúng vì ta thay mọi dữ liệu trong nhóm bằng trung điểm.</p>
+ <div class="q"><strong>Ví dụ đầy đủ:</strong> Dùng bảng ở slide trước, tính số trung bình.<div class="step">x̄ ≈ (2·1+5·3+8·5+4·7+1·9)/20.</div><div class="step">= (2+15+40+28+9)/20 = 94/20 = <b>4,7</b>.</div></div>
+ <h3>Quy trình làm</h3><ol><li>Tính trung điểm mỗi nhóm.</li><li>Nhân trung điểm với tần số tương ứng.</li><li>Cộng các tích.</li><li>Chia cho tổng tần số N.</li></ol>
+ <div class="q"><strong>Tự luyện:</strong> Hai nhóm [0;10), [10;20) có tần số 3 và 7. Tính số trung bình gần đúng.<button class="btn reveal" onclick="reveal(this)">Xem lời giải</button><div class="answer">Trung điểm 5 và 15. x̄=(3·5+7·15)/10=(15+105)/10=<b>12</b>.</div></div>
+</section>
+
+<section class="slide">
+ <div class="kicker">09 · Trung vị và mốt</div><h2>Trung vị Me của mẫu ghép nhóm</h2>
+ <p>Trung vị là giá trị chia mẫu đã sắp xếp thành hai nửa. Xác định <b>nhóm chứa trung vị</b> là nhóm đầu tiên có tần số tích lũy ≥ N/2.</p>
+ <div class="formula">Me ≈ L + [(N/2 − F)/f]·h</div>
+ <ul><li>L: đầu mút trái của nhóm chứa trung vị.</li><li>F: tần số tích lũy trước nhóm trung vị.</li><li>f: tần số của nhóm trung vị.</li><li>h: độ dài nhóm.</li></ul>
+ <h3>Ví dụ theo bảng điểm</h3><p>N=20 ⇒ N/2=10. Tần số tích lũy: 2,7,15,… nên nhóm trung vị là [4;6). L=4,F=7,f=8,h=2.</p>
+ <div class="formula">Me ≈ 4 + [(10−7)/8]·2 = 4,75</div>
+ <h3>Mốt Mo của mẫu ghép nhóm</h3>
+ <div class="formula">Mo ≈ L + [d₁/(d₁+d₂)]·h</div>
+ <p>L là đầu mút trái nhóm có tần số lớn nhất; h là độ dài nhóm; d₁=f₁−f₀; d₂=f₁−f₂. f₁ là tần số nhóm mốt, f₀ nhóm trước, f₂ nhóm sau.</p>
+ <p>Với bảng ví dụ, nhóm mốt [4;6): f₁=8, f₀=5, f₂=4 ⇒ d₁=3,d₂=4.</p><div class="formula">Mo ≈ 4 + [3/(3+4)]·2 = 4 + 6/7 ≈ 4,86</div>
+</section>
+
+<section class="slide">
+ <div class="kicker">09 · Bài tập thống kê</div><h2>Luyện đủ ba số đo</h2>
+ <div class="q"><strong>Bài 1 · dễ:</strong> Các nhóm [10;20),[20;30),[30;40) có tần số 2,5,3. Tìm trung điểm, N và số trung bình.<button class="btn reveal" onclick="reveal(this)">Xem lời giải</button><div class="answer">Trung điểm: 15,25,35. N=10. x̄=(2·15+5·25+3·35)/10=(30+125+105)/10=<b>26</b>.</div></div>
+ <div class="q"><strong>Bài 2 · trung vị:</strong> Bảng có nhóm [0;10),[10;20),[20;30) với tần số 4,10,6. Tính Me gần đúng.<button class="btn reveal" onclick="reveal(this)">Xem lời giải</button><div class="answer">N=20,N/2=10. Tần số tích lũy 4,14,20 ⇒ nhóm trung vị [10;20). L=10,F=4,f=10,h=10. Me≈10+[(10−4)/10]·10=<b>16</b>.</div></div>
+ <div class="q"><strong>Bài 3 · mốt:</strong> Ba nhóm liên tiếp cùng độ dài 5 có tần số 3,9,5. Nhóm mốt là nhóm thứ hai. Tính phần nội suy của mốt tính từ đầu trái nhóm mốt.<button class="btn reveal" onclick="reveal(this)">Xem lời giải</button><div class="answer">d₁=9−3=6; d₂=9−5=4. Phần nội suy = [6/(6+4)]·5=<b>3</b>. Vậy Mo = L+3 (L là đầu trái nhóm thứ hai).</div></div>
+ <div class="call warn">Mốt: chọn nhóm có tần số lớn nhất. Trung vị: dùng N/2 và tần số tích lũy. Hai thao tác này không giống nhau.</div>
+</section>
+
+<section class="slide">
+ <div class="kicker">10 · Tổng hợp công thức</div><h2>Trang công thức phải thuộc trước ngày thi</h2>
+ <div class="two">
+  <div class="card"><h3>Lượng giác</h3><p>sin²x+cos²x=1</p><p>sin(a±b)=sin a cos b ± cos a sin b</p><p>cos(a±b)=cos a cos b ∓ sin a sin b</p><p>sin2a=2sin a cos a</p><p>cos2a=cos²a−sin²a</p></div>
+  <div class="card"><h3>Phương trình</h3><p>sin x=sin α ⇒ α+2kπ hoặc π−α+2kπ</p><p>cos x=cos α ⇒ ±α+2kπ</p><p>tan/cot x = tan/cot α ⇒ α+kπ</p></div>
+  <div class="card"><h3>Dãy số – CSC</h3><p>uₙ=u₁+(n−1)d</p><p>Sₙ=n(u₁+uₙ)/2</p><p>CSC: uₙ₊₁−uₙ=d</p></div>
+  <div class="card"><h3>CSN</h3><p>uₙ=u₁qⁿ⁻¹</p><p>Sₙ=u₁(1−qⁿ)/(1−q), q≠1</p><p>CSN: uₙ₊₁/uₙ=q</p></div>
+  <div class="card"><h3>Thống kê</h3><p>xᵢ=(aᵢ+bᵢ)/2</p><p>x̄≈Σnᵢxᵢ/N</p><p>Me≈L+[(N/2−F)/f]h</p><p>Mo≈L+[d₁/(d₁+d₂)]h</p></div>
+ </div>
+</section>
+
+<section class="slide">
+ <div class="kicker">11 · Đề luyện tổng hợp</div><h2>Mini-test mô phỏng – 30 phút</h2>
+ <p class="muted">Tự làm trước, không mở lời giải. Đây là đề luyện tự biên soạn theo các dạng trong ma trận, không phải đề chính thức.</p>
+ <div class="q"><strong>Câu 1.</strong> Đổi 7π/6 rad sang độ.<br>A. 150° &nbsp; B. 120° &nbsp; C. 210° &nbsp; D. 240°<button class="btn reveal" onclick="reveal(this)">Đáp án & giải thích</button><div class="answer">C. 7π/6·180/π=210°.</div></div>
+ <div class="q"><strong>Câu 2.</strong> Giá trị cos(2π/3) là?<br>A. 1/2 &nbsp; B. −1/2 &nbsp; C. √3/2 &nbsp; D. −√3/2<button class="btn reveal" onclick="reveal(this)">Đáp án & giải thích</button><div class="answer">B. Góc 120° thuộc góc phần tư II, cos âm; cos(2π/3)=−1/2.</div></div>
+ <div class="q"><strong>Câu 3.</strong> Chu kỳ của y=sin(4x) là?<br>A. 4π &nbsp; B. 2π &nbsp; C. π/2 &nbsp; D. π/4<button class="btn reveal" onclick="reveal(this)">Đáp án & giải thích</button><div class="answer">C. T=2π/|4|=π/2.</div></div>
+ <div class="q"><strong>Câu 4.</strong> Nghiệm cos x=1/2 là?<br>A. x=±π/3+2kπ &nbsp; B. x=π/3+kπ &nbsp; C. x=π/6+2kπ &nbsp; D. x=±π/6+kπ<button class="btn reveal" onclick="reveal(this)">Đáp án & giải thích</button><div class="answer">A. Theo công thức cos x=cos α ⇔ x=±α+2kπ.</div></div>
+ <div class="q"><strong>Câu 5.</strong> Dãy 4,7,10,… có công sai?<br>A. 2 &nbsp; B. 3 &nbsp; C. 4 &nbsp; D. 7<button class="btn reveal" onclick="reveal(this)">Đáp án & giải thích</button><div class="answer">B. Hiệu hai số liên tiếp bằng 3.</div></div>
+ <div class="q"><strong>Câu 6.</strong> CSC u₁=2,d=5. u₆ bằng?<br>A. 22 &nbsp; B. 25 &nbsp; C. 27 &nbsp; D. 32<button class="btn reveal" onclick="reveal(this)">Đáp án & giải thích</button><div class="answer">C. u₆=2+5·5=27.</div></div>
+ <div class="q"><strong>Câu 7.</strong> CSN u₁=3,q=2. u₄ bằng?<br>A. 12 &nbsp; B. 18 &nbsp; C. 24 &nbsp; D. 48<button class="btn reveal" onclick="reveal(this)">Đáp án & giải thích</button><div class="answer">C. u₄=3·2³=24.</div></div>
+ <div class="q"><strong>Câu 8.</strong> Nhóm [6;10) có trung điểm?<br>A. 6 &nbsp; B. 8 &nbsp; C. 10 &nbsp; D. 16<button class="btn reveal" onclick="reveal(this)">Đáp án & giải thích</button><div class="answer">B. (6+10)/2=8.</div></div>
+</section>
+
+<section class="slide">
+ <div class="kicker">11 · Đúng / sai & trả lời ngắn</div><h2>Mini-test – phần tự luận ngắn</h2>
+ <div class="q"><strong>Câu 9 · Đúng/Sai:</strong> Với mọi x, sin²x+cos²x=1.<button class="btn reveal" onclick="reveal(this)">Xem</button><div class="answer">Đúng. Đây là hệ thức cơ bản.</div></div>
+ <div class="q"><strong>Câu 10 · Đúng/Sai:</strong> Hàm y=tan x có tập xác định ℝ.<button class="btn reveal" onclick="reveal(this)">Xem</button><div class="answer">Sai. Loại x=π/2+kπ.</div></div>
+ <div class="q"><strong>Câu 11 · Đúng/Sai:</strong> Dãy có uₙ₊₁−uₙ=−2 là CSC công sai −2.<button class="btn reveal" onclick="reveal(this)">Xem</button><div class="answer">Đúng theo định nghĩa.</div></div>
+ <div class="q"><strong>Câu 12 · Trả lời ngắn:</strong> CSC u₁=6,d=4. Tính S₈.<button class="btn reveal" onclick="reveal(this)">Xem</button><div class="answer">u₈=6+7·4=34. S₈=8(6+34)/2=<b>160</b>.</div></div>
+ <div class="q"><strong>Câu 13 · Trả lời ngắn:</strong> CSN u₁=4,q=−2. Tính u₅.<button class="btn reveal" onclick="reveal(this)">Xem</button><div class="answer">u₅=4·(−2)⁴=<b>64</b>.</div></div>
+ <div class="q"><strong>Câu 14 · Trả lời ngắn:</strong> Nhóm [20;30) có trung điểm bao nhiêu?<button class="btn reveal" onclick="reveal(this)">Xem</button><div class="answer">(20+30)/2=<b>25</b>.</div></div>
+</section>
+
+<section class="slide">
+ <div class="kicker">12 · Kế hoạch 7 ngày</div><h2>Lịch ôn từ hôm nay đến ngày thi</h2>
+ <div class="grid">
+  <div class="card"><h3>Ngày 1</h3><p>Đổi độ/radian, đường tròn lượng giác, bảng góc đặc biệt, dấu hàm.</p><span class="tag">45–90 phút</span></div>
+  <div class="card"><h3>Ngày 2</h3><p>Hệ thức, cung liên kết, công thức cộng, nhân đôi, tổng–tích.</p><span class="tag">45–90 phút</span></div>
+  <div class="card"><h3>Ngày 3</h3><p>Tập xác định, chu kỳ, tính chẵn lẻ, đồ thị và biến đổi hàm.</p><span class="tag">45–90 phút</span></div>
+  <div class="card"><h3>Ngày 4</h3><p>4 phương trình cơ bản, nghiệm trong đoạn, phương trình quy về cơ bản.</p><span class="tag">60–90 phút</span></div>
+  <div class="card"><h3>Ngày 5</h3><p>Dãy số, CSC, CSN; làm bài tìm uₙ và Sₙ.</p><span class="tag">60–90 phút</span></div>
+  <div class="card"><h3>Ngày 6</h3><p>Ghép nhóm, trung bình, trung vị, mốt; làm mini-test.</p><span class="tag">60–90 phút</span></div>
+  <div class="card"><h3>Ngày 7</h3><p>Làm đề 90 phút, chữa lỗi, ôn bảng công thức. Ngủ đủ, không nhồi kiến thức mới.</p><span class="tag">1 đề + chữa</span></div>
+ </div>
+ <div class="call"><b>Quy tắc mỗi buổi:</b> 15 phút nhắc công thức → 25 phút xem ví dụ → 30 phút tự làm → 10 phút ghi lỗi sai. Nếu chỉ còn ít thời gian, ưu tiên bài tập thay vì đọc lại thụ động.</div>
+</section>
+
+<section class="slide">
+ <div class="kicker">13 · Checklist trước giờ thi</div><h2>Đã thật sự sẵn sàng chưa?</h2>
+ <div class="card">
+  <p><label><input type="checkbox"> Đổi được độ ↔ radian không cần nhìn bảng.</label></p>
+  <p><label><input type="checkbox"> Thuộc sin, cos, tan của 0°, 30°, 45°, 60°, 90°.</label></p>
+  <p><label><input type="checkbox"> Xác định dấu lượng giác theo góc phần tư.</label></p>
+  <p><label><input type="checkbox"> Viết đúng công thức cộng và nhân đôi.</label></p>
+  <p><label><input type="checkbox"> Tìm tập xác định, chu kỳ, GTLN/GTNN của hàm lượng giác.</label></p>
+  <p><label><input type="checkbox"> Giải 4 phương trình lượng giác cơ bản và lọc nghiệm trên đoạn.</label></p>
+  <p><label><input type="checkbox"> Phân biệt dãy số, CSC, CSN; tìm uₙ và Sₙ.</label></p>
+  <p><label><input type="checkbox"> Tính trung điểm nhóm, tần số tích lũy, x̄, Me, Mo.</label></p>
+  <p><label><input type="checkbox"> Làm được một đề 90 phút và biết vì sao sai từng câu.</label></p>
+ </div>
+ <div class="call warn"><b>Điều quan trọng nhất:</b> đừng chỉ đọc lời giải rồi tưởng đã hiểu. Che lời giải, tự làm lại sau 10–20 phút. Câu nào sai, ghi nguyên nhân: sai công thức, sai dấu, sai biến đổi hay sai tính toán.</div>
+ <h3>Chúc bạn ôn tập hiệu quả!</h3><p class="muted">Tài liệu được biên soạn theo các chủ đề và cấu trúc điểm trong ảnh ma trận bạn gửi. Giáo viên có thể thay đổi số liệu/cách hỏi; hãy đối chiếu thêm vở ghi và bài tập đã chữa trên lớp.</p>
+</section>
+
+<div class="navbottom"><button class="btn" id="prev" onclick="move(-1)">← Trước</button><span class="counter" id="count">1 / 17</span><button class="btn primary" id="next" onclick="move(1)">Tiếp →</button></div>
+<div class="footer">Offline HTML • Không cần cài ứng dụng • Phím ← → để chuyển slide • Nút “In / PDF” để lưu bản in</div>
+</main>
+<aside id="toc" style="display:none;position:fixed;z-index:20;right:12px;top:75px;bottom:12px;width:min(340px,92vw);overflow:auto;background:#101b2d;border:1px solid #38506d;border-radius:16px;padding:15px;box-shadow:0 15px 60px #0009">
+ <div style="display:flex;justify-content:space-between;align-items:center"><b>MỤC LỤC</b><button class="btn" onclick="toggleToc()">Đóng ✕</button></div><div id="tocitems" class="toc"></div>
+</aside>
+<script>
+const slides=[...document.querySelectorAll('.slide')];let index=0;
+const names=['Bìa & cách học','Ma trận đề thi','Góc lượng giác','Giá trị lượng giác','Công thức lượng giác','Tổng – tích','Hàm số lượng giác','Biến đổi đồ thị','Phương trình cơ bản','Nghiệm trong đoạn','Phương trình biến đổi','Dãy số','Cấp số cộng','Bài tập CSC','Cấp số nhân','Bài tập CSN','Thống kê ghép nhóm','Số trung bình','Trung vị & mốt','Bài tập thống kê','Tổng hợp công thức','Mini-test trắc nghiệm','Đúng/Sai & trả lời ngắn','Kế hoạch 7 ngày','Checklist'];
+function show(n){index=Math.max(0,Math.min(slides.length-1,n));slides.forEach((s,i)=>s.classList.toggle('active',i===index));document.getElementById('count').textContent=(index+1)+' / '+slides.length;document.getElementById('bar').style.width=((index+1)/slides.length*100)+'%';document.getElementById('prev').disabled=index===0;document.getElementById('next').disabled=index===slides.length-1;window.scrollTo({top:0,behavior:'smooth'});}
+function move(d){show(index+d)}function reveal(btn){const a=btn.nextElementSibling;a.classList.toggle('show');btn.textContent=a.classList.contains('show')?'Ẩn lời giải':'Xem lời giải'}
+function toggleToc(){const t=document.getElementById('toc');t.style.display=t.style.display==='none'?'block':'none'}
+function fontSize(d){const s=getComputedStyle(document.body).fontSize;document.body.style.fontSize=(parseFloat(s)+d)+'px'}
+document.getElementById('tocitems').innerHTML=slides.map((s,i)=>`<button class="btn" onclick="show(${i});toggleToc()">${String(i+1).padStart(2,'0')} · ${names[i]||'Chủ đề ôn tập'}</button>`).join('');
+document.addEventListener('keydown',e=>{if(e.key==='ArrowRight')move(1);if(e.key==='ArrowLeft')move(-1);if(e.key==='Escape')document.getElementById('toc').style.display='none'});
+show(0);
+</script>
+</body></html>
